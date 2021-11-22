@@ -1,12 +1,13 @@
 {
   "name": "igalery",
   "version": "1.0.0",
-  "description": "Back End de la aplicacion IGalery",
+  "description": "Backend de la app IGalery",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mijail Jhonatan Palomino Rodriguez",
+  "author": "Palomino Rodriguez Mijail Jhonatan",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
