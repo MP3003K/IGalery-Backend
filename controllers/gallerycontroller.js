@@ -82,7 +82,7 @@ function consultarFotosPorUsuario(req, resp) {
 }
 
 function retornarImagen(req, resp){
-    resp.sendFile('uploads/'+req.params.imagename, {root:'.'});
+    resp.sendFile('src/archivos/'+req.params.imagename, {root:'.'});
 }
 
 module.exports = {
