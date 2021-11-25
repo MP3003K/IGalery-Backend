@@ -19,7 +19,7 @@ var storageConfig = multer.diskStorage({
 var upload = multer({storage: storageConfig});
 
 
-application.post('/gallery/create' ,upload.single('imagen') , galleryscontroller.crearNewFoto);
+application.post('/gallery/create' ,upload.single('imagen') , token.validarTokenDeUsuario , galleryscontroller.crearNewFoto);
 
 application.put('/gallery/edit', token.validarTokenDeUsuario , galleryscontroller.modificarFoto);
 
