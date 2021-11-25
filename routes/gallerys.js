@@ -9,7 +9,7 @@ var application = express.Router();
 
 var storageConfig = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, 'uploads/');
+        cb(null, 'src/archivos/');
     },
     filename: function(req, file, cb){
         var prefijo = Date.now() + '-' + Math.round(Math.random() * 1E10);
