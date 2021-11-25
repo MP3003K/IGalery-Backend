@@ -25,7 +25,7 @@ application.put('/gallery/edit', token.validarTokenDeUsuario , galleryscontrolle
 
 application.delete('/gallery/delete', token.validarTokenDeUsuario , galleryscontroller.eliminarFoto);
 
-application.get('/gallery/list', token.validarTokenDeUsuario , galleryscontroller.consultarFotosPorUsuario);
+application.get('/gallery/list' , galleryscontroller.consultarFotosPorUsuario);
 
 application.get('/gallery/obtenerimagen/:imagename' ,galleryscontroller.retornarImagen);
 
