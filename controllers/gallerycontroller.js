@@ -81,9 +81,14 @@ function consultarFotosPorUsuario(req, resp) {
 
 }
 
+function retornarImagen(req, resp){
+    resp.sendFile('uploads/'+req.params.imagename, {root:'.'});
+}
+
 module.exports = {
     crearNewFoto,
     modificarFoto,
     eliminarFoto,
-    consultarFotosPorUsuario
+    consultarFotosPorUsuario,
+    retornarImagen
 };

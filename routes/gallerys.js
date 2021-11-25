@@ -19,12 +19,14 @@ var storageConfig = multer.diskStorage({
 var upload = multer({storage: storageConfig});
 
 
-application.post('/gallery/create', token.validarTokenDeUsuario,upload.single('imagen') , galleryscontroller.crearNewFoto);
+application.post('/gallery/create',upload.single('imagen') , galleryscontroller.crearNewFoto);
 
 application.put('/gallery/edit', token.validarTokenDeUsuario , galleryscontroller.modificarFoto);
 
 application.delete('/gallery/delete', token.validarTokenDeUsuario , galleryscontroller.eliminarFoto);
 
 application.get('/gallery/list', token.validarTokenDeUsuario , galleryscontroller.consultarFotosPorUsuario);
+
+application.get('/gallery/obtenerimagen/:imagename', token.validarTokenDeUsuario , galleryscontroller.retornarImagen);
 
 module.exports = application;
