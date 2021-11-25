@@ -70,7 +70,7 @@ function eliminarFoto(req, resp) {
 
 function consultarFotosPorUsuario(req, resp) {
 
-    Gallery.find({ propietario: '619f05405e0849d8567a68d2'}, (err, fotosEncontrados) => {
+    Gallery.find({ propietario: req.headers.userId}, (err, fotosEncontrados) => {
         if (err) {
             resp.status(500).send({ message: "No se pudo consultar las fotos" });
         }

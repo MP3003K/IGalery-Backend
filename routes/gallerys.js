@@ -27,6 +27,6 @@ application.delete('/gallery/delete', token.validarTokenDeUsuario , galleryscont
 
 application.get('/gallery/list' , galleryscontroller.consultarFotosPorUsuario);
 
-application.get('/gallery/obtenerimagen/:imagename' ,galleryscontroller.retornarImagen);
+application.get('/gallery/obtenerimagen/:imagename' ,token.validarTokenDeUsuario,galleryscontroller.retornarImagen);
 
 module.exports = application;
